@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { label 'main' }
     environment {
      TF_HOME = tool('tf-1.7')
      ENV_auto_tfvars = credentials('auto_tfvars_jf')
