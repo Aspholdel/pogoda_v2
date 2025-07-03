@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Checkout') {
             steps {
-                checkout scmGit(branches: [[name: '*/pg_local_backend']], extensions: [], userRemoteConfigs: [[credentialsId: 'bitbucket-git', url: 'https://git@bitbucket.org:szkoleniacloud/cw28-tf-digitalocean.git']])
+                checkout scmGit(branches: [[name: '*/pg_local_backend']], extensions: [], userRemoteConfigs: [[credentialsId: 'bitbucket-git', url: 'https://bitbucket.org:szkoleniacloud/cw28-tf-digitalocean.git']])
             }
         }
         stage('Terraform INIT') {
