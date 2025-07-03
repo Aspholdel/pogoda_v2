@@ -1,9 +1,9 @@
 pipeline {
-    agent { docker 'node:14' }
+    agent any
     stages {
-        stage('Build') {
+        stage('Nasza pogoda') {
             steps {
-                echo 'Building a Node.js project'
+                echo 'Test...'
             }
         }
     }
