@@ -1,9 +1,17 @@
 pipeline {
     agent { label 'master' }
+    parameters {
+        string(
+            defaultValue: 'Szczecin',
+            description: '<b>Podaj swoje miasto by sprawdzić pogodę</b>',
+            name: 'MIASTO',
+            trim: true
+        )
+    }
     stages {
         stage('Nasza pogoda') {
             steps {
-                echo 'Test...'
+                echo "Tu bedzie moja pogoda wysietlana ${params.MIASTO}"
             }
         }
     }
